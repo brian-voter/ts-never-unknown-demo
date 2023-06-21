@@ -6,6 +6,9 @@ import axios from "axios";
 ///
 
 
+// Unknown is like the "any" keyword's stricter brother (and isn't completely insane)
+
+
 const CARDS_API_URL = "https://deckofcardsapi.com/api/deck/new/draw/";
 
 // our main function, where we need to use data from the API
@@ -156,3 +159,10 @@ async function schrodinger() {
 }
 
 // schrodinger();
+
+
+
+
+
+
+// TLDR: "unknown" is a strict "any".
