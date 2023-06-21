@@ -161,6 +161,22 @@ async function schrodinger() {
 // schrodinger();
 
 
+// More Advanced Use Case: Double assertion
+
+
+// whoa there pal!
+// function handler(event: Event) {
+//     let element = event as HTMLElement; // Error: Neither 'Event' nor type 'HTMLElement' is assignable to the other
+// }
+
+
+
+// ok.
+function handler(event: Event) {
+    let element = event as unknown as HTMLElement; // Okay!
+}
+
+
 
 
 
