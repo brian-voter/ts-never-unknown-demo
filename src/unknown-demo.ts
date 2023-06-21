@@ -40,10 +40,10 @@ main();
 // ⚠️ BAD CODE: ⚠️
 
 async function getRandomCard() {
-    const result = await axios.get(CARDS_API_URL);
+    // const result = await axios.get(CARDS_API_URL);
 
     // ^ is the same as same as:
-    // const result = await axios.get<any>(CARDS_API_URL);
+    const result = await axios.get<any>(CARDS_API_URL);
 
     // implicit any? YECK!
 
@@ -161,12 +161,20 @@ async function schrodinger() {
 // schrodinger();
 
 
+
+
+
+
+
+
+
 // More Advanced Use Case: Double assertion
 
 
 // whoa there pal!
 // function handler(event: Event) {
-//     let element = event as HTMLElement; // Error: Neither 'Event' nor type 'HTMLElement' is assignable to the other
+//     let element = event as HTMLElement;
+//     Error: Neither 'Event' nor type 'HTMLElement' is assignable to the other
 // }
 
 
@@ -175,6 +183,8 @@ async function schrodinger() {
 function handler(event: Event) {
     let element = event as unknown as HTMLElement; // Okay!
 }
+
+
 
 
 
